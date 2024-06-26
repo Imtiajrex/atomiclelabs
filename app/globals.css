@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+
+	--background: 0 0% 10%;
+	--foreground: 0 0% 100%;
+
+	--muted: 0 0% 70%;
+
+	--card: 0 0% 100%;
+
+	--border: 0 0% 89.8%;
+	--input: 0 0% 89.8%;
+
+	--primary: 19, 89%, 53%;
+
+	--secondary: 0 0% 96.1%;
+
+	--accent: 245, 94%, 65%;
+
+	--destructive: 0 84.2% 60.2%;
+
+	--ring: 0 0% 3.9%;
+
+	--radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+body {
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+
+	scrollbar-gutter: stable both-edges;
+}
+
+.display {
+	font-family: "Lora", serif;
+}
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #11101000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #2b2b2b;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #454545;
+}
